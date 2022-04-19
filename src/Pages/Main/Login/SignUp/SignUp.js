@@ -25,6 +25,7 @@ const SignUp = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.psw.value;
+        console.log(email, password);
         if (agree) {
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });

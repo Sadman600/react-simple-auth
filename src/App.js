@@ -13,7 +13,11 @@ function App() {
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/' element={
+          <RequireAuth>
+            <Home></Home>
+          </RequireAuth>
+        }></Route>
         <Route path='/countries' element={
           <RequireAuth>
             <Countries></Countries>
