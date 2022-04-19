@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
+import PageTitle from '../../../SharedPage/PageTitle/PageTitle';
 import './Login.css';
 
 const Login = () => {
@@ -31,6 +33,7 @@ const Login = () => {
     }
     return (
         <div>
+            <PageTitle title='Login'></PageTitle>
             <form onSubmit={handleSignIn} className='login-container'>
                 <h1> Login </h1>
                 <label htmlFor="email"><b>Email</b></label>

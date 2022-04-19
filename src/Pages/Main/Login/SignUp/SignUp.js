@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
+import PageTitle from '../../../SharedPage/PageTitle/PageTitle';
+
 
 
 const SignUp = () => {
@@ -32,6 +34,7 @@ const SignUp = () => {
     }
     return (
         <div>
+            <PageTitle title='Sign Up'></PageTitle>
             <form onSubmit={handleCreateUser} className='signup-container'>
                 <h1> SignUp </h1>
                 <label htmlFor="name"><b>Name</b></label>
